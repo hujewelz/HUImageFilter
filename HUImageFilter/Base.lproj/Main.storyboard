@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="so6-kI-x63">
+                                <rect key="frame" x="88" y="60" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TMV-kb-WYQ"/>
+                                    <constraint firstAttribute="width" secondItem="so6-kI-x63" secondAttribute="height" id="yMQ-70-cEX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-xE-PGT">
+                                <rect key="frame" x="122" y="280" width="66" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.70196078429999997" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K35-r5-BGh"/>
+                                    <constraint firstAttribute="width" constant="66" id="djz-hi-Nn3"/>
+                                </constraints>
+                                <state key="normal" title="添加滤镜"/>
+                                <connections>
+                                    <action selector="addFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5t-VA-aJT"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-JH-XQh">
+                                <rect key="frame" x="208" y="280" width="66" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.015930868650526314" blue="0.048857149773684064" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="还原"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nic-k2-7RI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cSb-JH-XQh" firstAttribute="height" secondItem="zHW-xE-PGT" secondAttribute="height" id="NsL-WH-joQ"/>
+                            <constraint firstItem="cSb-JH-XQh" firstAttribute="top" secondItem="zHW-xE-PGT" secondAttribute="top" id="a0E-LS-K7D"/>
+                            <constraint firstItem="cSb-JH-XQh" firstAttribute="width" secondItem="zHW-xE-PGT" secondAttribute="width" id="eX2-zp-PbE"/>
+                            <constraint firstItem="zHW-xE-PGT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fPc-rh-OW1"/>
+                            <constraint firstItem="zHW-xE-PGT" firstAttribute="top" secondItem="so6-kI-x63" secondAttribute="bottom" constant="20" id="hZH-Gn-Qrw"/>
+                            <constraint firstItem="so6-kI-x63" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kQC-hZ-VwW"/>
+                            <constraint firstItem="so6-kI-x63" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="sIt-gV-mnt"/>
+                            <constraint firstItem="cSb-JH-XQh" firstAttribute="leading" secondItem="zHW-xE-PGT" secondAttribute="trailing" constant="20" id="tf9-fU-CzV"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="so6-kI-x63" id="4QW-vY-aUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a.jpg" width="400" height="397"/>
+    </resources>
+</document>

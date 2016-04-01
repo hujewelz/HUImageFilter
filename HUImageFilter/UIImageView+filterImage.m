@@ -16,20 +16,17 @@
     if (image) {
         HUImageFilterMaker *filter = [[HUImageFilterMaker alloc] init];
         filter.inputImage = image;
-        
-        dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            if (filterBlock ) {
+        if (filterBlock ) {
+            dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 filterBlock(filter);
                 image = filter.outPutImage;
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.image = image;
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.image = image;
+                });
             });
-        });
-        
-        
-
+            
+        }
     }
    
     

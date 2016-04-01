@@ -171,7 +171,7 @@
 
 - (HUImageFilterMaker *)addMedianFilter {
     //CIMedianFilter
-    [self addFiterWithName:@"CICircularWrap" values:nil];
+    [self addFiterWithName:@"CIMedianFilter" values:nil];
     
     return self;
 }
